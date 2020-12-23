@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.header{
+    background-color: teal;
+    grid-area: header;
+}
+
+.nav{
+    background-color: khaki;
+    grid-area: nav;
+
+}
+.contenido{
+    /* background-color: lightblue; */
+    grid-area: contenido;
+
+    /* Creando un grid dentro de otro */
+    display: grid;
+    grid-gap: 0.5em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "itemUno itemUno"
+    "itemDos itemTres"
+
+}
+
+.aside{
+    background-color: bisque;
+    grid-area: aside;
+}
+
+.footer{
+    background-color: brown;
+    grid-area: footer;
+}
+
+.grid-container{
+    height: 100vh;
+    margin: 0%;
+    display: grid;
+    grid-gap: 0.2em;
+    /* grid-template-columns: 15% auto 15%; */
+    /* grid-template-rows: 5% auto  5%; */
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 18fr  1fr;
+    grid-template-areas: 
+    "header header header"
+    "nav contenido aside"
+    "footer footer footer"
+}
+
+@media only screen and (max-width: 600px){
+    .grid-container{
+        height: 100vh;
+        margin: 0%;
+        display: grid;
+        grid-gap: 0.2em;
+        /* grid-template-columns: 15% auto 15%; */
+        /* grid-template-rows: 5% auto  5%; */
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, auto); /* tamaño automatico */
+        grid-template-areas: 
+        "header"
+        "contenido"
+        "aside"
+        "footer"
+    }
+    .nav{
+        display: none;
+    }
+    .contenido{
+        background-color: lightblue;
+        grid-area: contenido;
+    
+        /* Creando un grid dentro de otro */
+        display: grid;
+        grid-gap: 0.2em;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr; /*filas*/
+        grid-template-areas:
+        "itemUno"
+        "itemDos"
+        "itemTres"
+    
+    }
+}
+
+.item-1{
+    /* background-color: chartreuse; */
+    grid-area: itemUno;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr; /*filas*/
+}
+
+.grid-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #03afff;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    border: solid 1px rgb(255, 255, 255);
+}
+.item-2{
+    background-color: orange;
+    grid-area: itemDos;
+}
+.item-3{
+    background-color: blue;
+    grid-area: itemTres;
+}
