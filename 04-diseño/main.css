@@ -18,7 +18,7 @@
 
     /* Creando un grid dentro de otro */
     display: grid;
-    grid-gap: 0.5em;
+    grid-gap: 0.2em;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
@@ -86,6 +86,18 @@
         "itemTres"
     
     }
+    .item-1{
+        /* background-color: chartreuse; */
+        grid-area: itemUno;
+    
+        display: grid;
+        grid-gap: 0.2em;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr; /*filas*/
+        grid-template-areas: 
+        "grid-item";
+
+    }
 }
 
 .item-1{
@@ -93,7 +105,8 @@
     grid-area: itemUno;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 0.2em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr; /*filas*/
 }
 
@@ -106,6 +119,15 @@
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
     border: solid 1px rgb(255, 255, 255);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.grid-item:hover{
+    filter: opacity(0.9);
+    transform: scale(1.04);
 }
 .item-2{
     background-color: orange;
