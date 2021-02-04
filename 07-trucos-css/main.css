@@ -1,0 +1,76 @@
+/* body{
+    blend Nazi
+    background-image: url('jim.jpg');
+    background-color: #458f55;
+    background-blend-mode: difference;
+} */
+
+/* clipps
+body > #bg {
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    position: absolute;
+    z-index: -1;
+}
+*/
+
+@keyframes ejemplo {
+    0%{
+        background: violet;
+    }
+    25%{
+        background:red;
+    }
+    50%{
+        background:pink;
+    }
+    75%{
+        background: yellow;
+    }
+    100%{
+        background: green;
+    }
+}
+
+/* @-webkit-keyframes ejemplo {
+    0%{
+        background: violet;
+    }
+    25%{
+        background:red;
+    }
+    50%{
+        background:pink;
+    }
+    75%{
+        background: yellow;
+    }
+    100%{
+        background: green;
+    }
+}
+
+
+div {
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    animation: ejemplo 10s infinite;
+    -webkit-animation: ejemplo 10s infinite;
+} */
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    background: black;
+    background: radial-gradient(
+        circle,
+        black 0%,
+        white 100%
+    );
+}
